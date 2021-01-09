@@ -55,7 +55,7 @@ public class CardSwipeAdapter extends RecyclerView.Adapter<CardSwipeAdapter.Card
 
 
     // 3. CardSwipeViewHolder:
-    // don't need to bind
+    // already referenced don't need to bind
     public static class CardSwipeViewHolder extends RecyclerView.ViewHolder {
 
         ImageView imageView;

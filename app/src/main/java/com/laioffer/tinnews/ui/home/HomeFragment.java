@@ -59,7 +59,8 @@ public class HomeFragment extends Fragment implements CardStackListener {
         CardSwipeAdapter swipeAdapter = new CardSwipeAdapter();
 
         // we need to provide an listener
-        // this: home fragment; we can also pass in an anonymous class
+        // this: home fragment since we use this class to implement cardstacklistener
+        // ; we can also pass in an anonymous class
         layoutManager = new CardStackLayoutManager(requireContext(), this);
         layoutManager.setStackFrom(StackFrom.Top);
         binding.homeCardStackView.setLayoutManager(layoutManager);
@@ -110,8 +111,13 @@ public class HomeFragment extends Fragment implements CardStackListener {
         if (direction == Direction.Left) {
             Log.d("CardStackView", "Unliked " + layoutManager.getTopPosition());
         } else if (direction == Direction.Right) {
-            Log.d("CardStackView", "Liked "  + layoutManager.getTopPosition());
+            Log.d("CardStackView", "Liked " + layoutManager.getTopPosition());
+            // get the previous one
+            Article article = articles.get(layoutManager.getTopPosition() - 1);
+            viewModel.setFavoriteArticleInput(article);
+
         }
+
     }
 
     @Override

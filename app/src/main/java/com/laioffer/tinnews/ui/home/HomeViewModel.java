@@ -7,6 +7,7 @@ import androidx.lifecycle.ViewModel;
 
 import com.laioffer.tinnews.repository.NewsRepository;
 
+import model.Article;
 import model.NewsResponse;
 
 // GOOGLE MVVM provides
@@ -33,6 +34,10 @@ public class HomeViewModel extends ViewModel {
         // 只需要做一次，新建live data object
         // observe pattern: automatically create an output
         return Transformations.switchMap(countryInput, repository::getTopHeadlines);
+    }
+
+    public void setFavoriteArticleInput(Article article) {
+        repository.favoriteArticle(article);
     }
 }
 
