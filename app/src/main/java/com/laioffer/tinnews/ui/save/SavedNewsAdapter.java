@@ -16,7 +16,7 @@ import com.laioffer.tinnews.databinding.SavedNewsItemBinding;
 import java.util.ArrayList;
 import java.util.List;
 
-import model.Article;
+import com.laioffer.tinnews.model.Article;
 
 public class SavedNewsAdapter extends RecyclerView.Adapter<SavedNewsAdapter.SavedNewsViewHolder> {
 
@@ -55,8 +55,8 @@ public class SavedNewsAdapter extends RecyclerView.Adapter<SavedNewsAdapter.Save
         holder.authorTextView.setText(article.author);
         holder.descriptionTextView.setText(article.description);
         holder.favoriteIcon.setOnClickListener(v -> itemCallback.onRemoveFavorite(article));
+        // when click other than the heart, go to detail page
         holder.itemView.setOnClickListener(v -> itemCallback.onOpenDetails(article));
-
     }
 
     @Override

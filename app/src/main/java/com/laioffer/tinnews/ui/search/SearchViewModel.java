@@ -7,7 +7,7 @@ import androidx.lifecycle.ViewModel;
 
 import com.laioffer.tinnews.repository.NewsRepository;
 
-import model.NewsResponse;
+import com.laioffer.tinnews.model.NewsResponse;
 
 public class SearchViewModel extends ViewModel {
 

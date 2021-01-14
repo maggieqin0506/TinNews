@@ -8,7 +8,7 @@ import androidx.room.Query;
 
 import java.util.List;
 
-import model.Article;
+import com.laioffer.tinnews.model.Article;
 
 @Dao
 public interface ArticleDao {

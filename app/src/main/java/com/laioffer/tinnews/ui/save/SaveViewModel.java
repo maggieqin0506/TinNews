@@ -7,7 +7,7 @@ import com.laioffer.tinnews.repository.NewsRepository;
 
 import java.util.List;
 
-import model.Article;
+import com.laioffer.tinnews.model.Article;
 
 public class SaveViewModel extends ViewModel {
 

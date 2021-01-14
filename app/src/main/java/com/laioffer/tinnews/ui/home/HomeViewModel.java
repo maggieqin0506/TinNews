@@ -7,8 +7,8 @@ import androidx.lifecycle.ViewModel;
 
 import com.laioffer.tinnews.repository.NewsRepository;
 
-import model.Article;
-import model.NewsResponse;
+import com.laioffer.tinnews.model.Article;
+import com.laioffer.tinnews.model.NewsResponse;
 
 // GOOGLE MVVM provides
 public class HomeViewModel extends ViewModel {

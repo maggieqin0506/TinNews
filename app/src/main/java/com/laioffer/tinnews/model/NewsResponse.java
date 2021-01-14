@@ -1,4 +1,4 @@
-package model;
+package com.laioffer.tinnews.model;
 
 import java.util.List;
 import java.util.Objects;

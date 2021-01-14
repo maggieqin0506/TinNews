@@ -13,8 +13,8 @@ import com.laioffer.tinnews.network.RetrofitClient;
 
 import java.util.List;
 
-import model.Article;
-import model.NewsResponse;
+import com.laioffer.tinnews.model.Article;
+import com.laioffer.tinnews.model.NewsResponse;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;

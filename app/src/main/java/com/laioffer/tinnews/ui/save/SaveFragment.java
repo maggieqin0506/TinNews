@@ -6,6 +6,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
+import androidx.navigation.fragment.NavHostFragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 
 import android.util.Log;
@@ -13,12 +14,11 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.laioffer.tinnews.R;
 import com.laioffer.tinnews.databinding.FragmentSaveBinding;
 import com.laioffer.tinnews.repository.NewsRepository;
 import com.laioffer.tinnews.repository.NewsViewModelFactory;
 
-import model.Article;
+import com.laioffer.tinnews.model.Article;
 
 public class SaveFragment extends Fragment {
 
@@ -47,12 +47,13 @@ public class SaveFragment extends Fragment {
         binding.newsSavedRecyclerView.setAdapter(savedNewsAdapter);
         binding.newsSavedRecyclerView.setLayoutManager(new LinearLayoutManager(requireContext()));
 
-
         savedNewsAdapter.setItemCallback(new SavedNewsAdapter.ItemCallback() {
             @Override
             public void onOpenDetails(Article article) {
-                // TODO
-                Log.d("onOpenDetails", article.toString());
+                SaveFragmentDirections.ActionNavigationSaveToNavigationDetails direction =
+                        SaveFragmentDirections.actionNavigationSaveToNavigationDetails(article);
+                NavHostFragment.findNavController(SaveFragment.this).navigate(direction);
+
             }
 
             @Override
@@ -69,7 +70,7 @@ public class SaveFragment extends Fragment {
         // observe view model
         viewModel
                 .getAllSavedArticles()
-                .observe(
+                .observe( // refresh
                         getViewLifecycleOwner(),
                         savedArticles -> {
                             if (savedArticles != null) {
