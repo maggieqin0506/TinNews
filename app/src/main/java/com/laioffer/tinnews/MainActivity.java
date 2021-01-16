@@ -28,7 +28,7 @@ public class MainActivity extends AppCompatActivity {
         // give controller to navigation view, so they bind together
         NavigationUI.setupWithNavController(navView, navController);
         // give controller to the action bar (on the top)
-        NavigationUI.setupActionBarWithNavController(this, navController);
+//        NavigationUI.setupActionBarWithNavController(this, navController);
 
 //        NewsApi api = RetrofitClient.newInstance(this).create(NewsApi.class);
 //
