@@ -1,32 +1,26 @@
-package com.laioffer.tinnews;
+package com.laioffer.tinnews
 
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.navigation.NavController;
-import androidx.navigation.fragment.NavHostFragment;
-import androidx.navigation.ui.NavigationUI;
+import android.os.Bundle
+import androidx.appcompat.app.AppCompatActivity
+import androidx.navigation.NavController
+import androidx.navigation.fragment.NavHostFragment
+import androidx.navigation.ui.NavigationUI
+import com.google.android.material.bottomnavigation.BottomNavigationView
 
-import android.os.Bundle;
-
-import com.google.android.material.bottomnavigation.BottomNavigationView;
-
-public class MainActivity extends AppCompatActivity {
-
-    private NavController navController;
-
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-
-        BottomNavigationView navView = findViewById(R.id.nav_view);
-        NavHostFragment navHostFragment = (NavHostFragment) getSupportFragmentManager()
-                .findFragmentById(R.id.nav_host_fragment);
+class MainActivity : AppCompatActivity() {
+    private var navController: NavController? = null
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_main)
+        val navView = findViewById<BottomNavigationView>(R.id.nav_view)
+        val navHostFragment = supportFragmentManager
+                .findFragmentById(R.id.nav_host_fragment) as NavHostFragment?
 
         // 控制中间的flow
         // give control to fragment
-        navController = navHostFragment.getNavController();
+        navController = navHostFragment!!.navController
         // give controller to navigation view, so they bind together
-        NavigationUI.setupWithNavController(navView, navController);
+        NavigationUI.setupWithNavController(navView, navController!!)
         // give controller to the action bar (on the top)
 //        NavigationUI.setupActionBarWithNavController(this, navController);
 
@@ -50,8 +44,7 @@ public class MainActivity extends AppCompatActivity {
 //        });
     }
 
-    @Override
-    public boolean onSupportNavigateUp() {
-        return navController.navigateUp();
+    override fun onSupportNavigateUp(): Boolean {
+        return navController!!.navigateUp()
     }
 }
