@@ -20,6 +20,7 @@ public class NewsViewModelFactory implements ViewModelProvider.Factory {
     @NonNull
     @Override
     public <T extends ViewModel> T create(@NonNull Class<T> modelClass) {
+        // observer
         if (modelClass.isAssignableFrom(HomeViewModel.class)) {
             return (T) new HomeViewModel(repository);
         } else if (modelClass.isAssignableFrom(SearchViewModel.class)) {

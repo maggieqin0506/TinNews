@@ -21,10 +21,17 @@ public class HomeViewModel extends ViewModel {
         this.repository = newsRepository;
     }
 
+
+    /*
+    decouple input and output
+     */
+
+    // get input
     public void setCountryInput(String country) {
         countryInput.setValue(country);
     }
 
+    // get result
     public LiveData<NewsResponse> getTopHeadlines() {
         // give the input data to getTopHeadlines method
         // repository:: method reference
@@ -33,6 +40,13 @@ public class HomeViewModel extends ViewModel {
         // 生产线建好了，只有一条生产线
         // 只需要做一次，新建live data object
         // observe pattern: automatically create an output
+
+        /*
+        once countryInput is ready, then trigger getTopHeadlines function to get the output
+        repository::getTopHeadlines - method reference (one of the lambda usage)
+        ContainingClass::staticMethodName
+
+         */
         return Transformations.switchMap(countryInput, repository::getTopHeadlines);
     }
 

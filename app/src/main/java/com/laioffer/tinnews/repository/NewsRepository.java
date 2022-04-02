@@ -30,6 +30,11 @@ public class NewsRepository {
         database = ((TinNewsApplication) context.getApplicationContext()).getDatabase();
     }
 
+    /**
+     *
+     * @param country - input country
+     * @return - return the searching result
+     */
     public LiveData<NewsResponse> getTopHeadlines(String country) {
         MutableLiveData<NewsResponse> topHeadlinesLiveData = new MutableLiveData<>();
         newsApi.getTopHeadlines(country)

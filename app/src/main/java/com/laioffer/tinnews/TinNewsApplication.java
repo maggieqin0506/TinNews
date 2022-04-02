@@ -11,7 +11,8 @@ import com.laioffer.tinnews.database.TinNewsDatabase;
 
 // app level configuration so as to have getter library connect to the app
 public class TinNewsApplication extends Application {
-
+// app's lifecycle 全局初始化的操作
+    // app打开的一瞬间先运行这个
     private TinNewsDatabase database;
 
     @Override
@@ -27,4 +28,3 @@ public class TinNewsApplication extends Application {
         return database;
     }
 }
-
