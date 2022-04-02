@@ -1,9 +1,9 @@
 <component name="libraryTable">
   <library name="Gradle: com.ashokvarma.android:gander:3.1.0@aar">
     <CLASSES>
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/5f639539c3db8b2199b464480809c3d4/jetified-gander-3.1.0/res" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/5f639539c3db8b2199b464480809c3d4/jetified-gander-3.1.0/AndroidManifest.xml" />
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/5f639539c3db8b2199b464480809c3d4/jetified-gander-3.1.0/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/e433e3b7b76e2a038cfab72a9a7c1de1/jetified-gander-3.1.0/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/e433e3b7b76e2a038cfab72a9a7c1de1/jetified-gander-3.1.0/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/e433e3b7b76e2a038cfab72a9a7c1de1/jetified-gander-3.1.0/AndroidManifest.xml" />
     </CLASSES>
     <JAVADOC>
       <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.ashokvarma.android/gander/3.1.0/c1bb0b3c82f39ab029b72ca089819bc99c256ab3/gander-3.1.0-javadoc.jar!/" />

@@ -2,9 +2,10 @@
   <library name="Gradle: com.ashokvarma.android:gander-imdb:3.1.0@aar">
     <CLASSES>
       <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/c624cd249e89f285cc912d7e7a6f6557/jetified-gander-imdb-3.1.0/res" />
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/a2f08cf6800d392b0c55c1af121bdf34/jetified-gander-imdb-3.1.0/jars/classes.jar!/" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/a2f08cf6800d392b0c55c1af121bdf34/jetified-gander-imdb-3.1.0/AndroidManifest.xml" />
       <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/a2f08cf6800d392b0c55c1af121bdf34/jetified-gander-imdb-3.1.0/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/b8cf242f8384b769794431a08cbc0606/jetified-gander-imdb-3.1.0/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/b8cf242f8384b769794431a08cbc0606/jetified-gander-imdb-3.1.0/AndroidManifest.xml" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/b8cf242f8384b769794431a08cbc0606/jetified-gander-imdb-3.1.0/jars/classes.jar!/" />
     </CLASSES>
     <JAVADOC>
       <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.ashokvarma.android/gander-imdb/3.1.0/a9bfa8148b0ed67e11215f21a6ddb7a83c6a57a9/gander-imdb-3.1.0-javadoc.jar!/" />
