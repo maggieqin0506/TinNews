@@ -6,6 +6,11 @@ Introduction: this is an android news application, where users can first browse 
 - Built the Room Database with LiveData and ViewModel to support local cache and offline model.
 - Integrated Retrofit and LiveData to pull the latest news data from a RESTful endpoint (newsapi.org).
 
+# Architecture
+![TinderNews MVVM](https://github.com/user-attachments/assets/4b1608b9-f90f-4ba7-8913-efb653bcb7ca)
+<img width="419" alt="Architecture" src="https://github.com/user-attachments/assets/eaf233ee-ca65-4b53-9033-f1478b888184">
+
+
 ## Demo
 
 #### Main Page:
